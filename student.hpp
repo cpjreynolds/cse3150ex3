@@ -18,6 +18,12 @@ public:
     // returns the total class score.
     double total_score() const;
 
+    // returns a string representing the "pretty" version of the student record.
+    // (i.e. with labels on the data)
+    std::string pretty_print() const;
+
+    friend bool operator==(const student& lhs, const student& rhs) = default;
+
     // read in a student record
     //
     // student record formatting is assumed to be a sequence of comma separated
@@ -25,14 +31,18 @@ public:
     //
     // "{id, name, final_grade, midterm, hw_grade[0], hw_grade[1], hw_grade[n]}"
     friend std::istream& operator>>(std::istream& is, student& obj);
+
     // output a student record
+    //
+    // symmetric with operator>>
     friend std::ostream& operator<<(std::ostream& os, const student& obj);
 
 private:
-    int id;
+    // sensible defaults
+    int id = 0;
     std::string name;
-    int final_grade;
-    int midterm;
+    int final_grade = 0;
+    int midterm = 0;
     std::vector<int> hw_grades;
 };
 

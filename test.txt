@@ -1,0 +1,5 @@
+{123,       Ada Lovelace,       99, 92, 83, 91, 99, 92}
+{124,       Donald Knuth,       97, 94, 94, 90, 98, 97}
+{125,       Ken Thompson,       92, 93, 92, 93, 88, 91}
+{126,       Dennis Ritchie,     96, 99, 73, 98, 64, 92}
+{127,       Bjarne Stroustrup,  94, 97, 32, 91, 92, 99}
